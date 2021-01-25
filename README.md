@@ -23,3 +23,6 @@ files :
     * delete_movie : deletes movie from the current movie list. It takes 'movie' which a an existing movie name from a POST request
 * wsgi.py - contains code that run starts a local server for api.py
 * requirements.txt
+
+
+API documentation published at https://documenter.getpostman.com/view/8117248/TW6uo96d
