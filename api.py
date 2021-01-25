@@ -19,9 +19,9 @@ with open('rentals.json') as f:
 #  Get all users
 @app.route('/api/user', methods=['GET'])
 def get_users():
-    return {
-        "userData": users
-    }
+    return {"message": "Users Retrieved Successfully",
+            "userData": users
+            }
 
 
 # Create user
@@ -32,7 +32,7 @@ def create_user():
     email = request_json.get('email')
     password = request_json.get('password')
     latest_id = users[-1]['id']
-    user_data = {"id": latest_id + 1, 'username': username, 'email': email, 'password': password, 'genres': genres}
+    user_data = {"id": latest_id + 1, 'username': username, 'email': email, 'password': password}
     users.append(user_data)
     with open("users.json", "w") as jsonFile:
         json.dump(users, jsonFile)
